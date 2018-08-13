@@ -1,0 +1,51 @@
+{
+  "name": "nyc-tsx-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bradley Lord <blord@mail.acponline.org>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test/**/*.ts",
+    "cover": "nyc mocha test/**/*.ts"
+  },
+  "nyc": {
+    "include": [
+      "src/*.{js,ts,tsx}"
+    ],
+    "exclude": [
+      "**/node_modules/**"
+    ],
+    "extension": [
+      ".js",
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "source-map-support/register",
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html"
+    ],
+    "produceSourceMap": true,
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+  },
+  "dependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.10.24",
+    "antd-mobile": "^2.2.3",
+    "chai": "^4.1.0",
+    "fastclick": "^1.0.6",
+    "mocha": "^3.4.2",
+    "nyc": "^12.0.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "source-map-support": "^0.4.15",
+    "ts-node": "^3.2.0",
+    "tsconfig-paths": "^2.2.0",
+    "typescript": "^2.4.1"
+  }
+}
